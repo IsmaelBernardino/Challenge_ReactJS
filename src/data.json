@@ -1,0 +1,32 @@
+[
+  {
+    "component": "text",
+    "label": "First Name",
+    "type": "text",
+    "id": 1
+  },
+  {
+    "component": "text",
+    "label": "Last Name",
+    "type": "text",
+    "id": 2
+  },
+  {
+    "component": "number",
+    "label": "Age",
+    "type": "number",
+    "id": 3
+  },
+  {
+    "component": "date",
+    "label": "Birthday",
+    "type": "date",
+    "id": 4
+  },
+  {
+    "component": "select",
+    "label": "Country",
+    "type": "select",
+    "id": 5
+  }
+]

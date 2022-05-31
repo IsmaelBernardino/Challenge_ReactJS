@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Form from "./components/Form";
+import ListFields from "./components/ListFields";
 
 function App() {
+
+  const [page, setPage] = useState('')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col items-center p-10">
+      <div className="flex gap-4 mb-8">
+        <a href='#' onClick={() => setPage('form')} className='text-white bg-slate-400 border-2 border-slate-500 rounded-md p-2'>Go to Form</a>
+        <a href='#' onClick={() => setPage('list')} className='text-white bg-slate-400 border-2 border-slate-500 rounded-md p-2'>Go to List Fields</a>
+      </div>
+      {page == 'list' ? <ListFields /> : <Form />}
     </div>
   );
 }
